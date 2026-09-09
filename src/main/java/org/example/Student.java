@@ -1,4 +1,6 @@
 package org.example;
+import java.util.ArrayList;
+
 
 // Part C
 
@@ -15,22 +17,34 @@ public class Student {
         System.out.println("Average: " + student.getAverage());
         // student1.setAverage(101.0);
 
-        Student[] students = {
+        /*
+       Student[] students = {
                 new Student("V100001", "Amina", 86.5),
                 new Student("V100002", "Daniel", 72.0),
-                new Student("V100003", "Sofia", 91.0)};
-
+                new Student("V100003", "Sofia", 91.0)
+        };
 
         for (Student studentList : students) {
         System.out.println(studentList);
         }
 
         System.out.println(calculateAverage(students));
+        System.out.println(findStudent(students, "V100002")); // it will return the student id, name, and average
+        System.out.println(findStudent(students, "V999999")); // it return null because there is no studentID with V999999.
+        */
 
+        ArrayList<Student> students = new ArrayList<>();
+            students.add(new Student("V100001", "Amina", 86.5));
+            students.add(new Student("V100002", "Daniel", 72.0));
+            students.add(new Student("V100003", "Sofia", 91.0));
+            students.add(new Student("V100004", "Drake", 50.0));
+            students.add(new Student("V100005", "Lebron", 99.0));
 
-        System.out.println(findStudent(students, "V100002"));
+            System.out.println(findStudent(students, "V100004"));
+            System.out.println(findStudent(students, "V100009"));
 
-
+            System.out.println(countAbove(students, 10.0));
+            System.out.println(countAbove(students, 90.0));
 
     }
 
@@ -98,16 +112,37 @@ public class Student {
     }
 
     // Part F
-    /*
-    public static Student findStudent(ArrayList<Student> students, String id){
 
+    public static Student findStudent(ArrayList<Student> students, String id) {
+        for (Student student : students) {
+            if (student.getId().equals(id)) {
+                return student;
+            }
+        }
+        return null;
     }
 
     public static int countAbove(ArrayList<Student> students, double threshold){
+        int count = 0;
 
+        for(Student student : students){
+            if(student.getAverage() > threshold){
+                count++;
+            }
+        }
+        return count;
     }
-    */
+
 }
+
+//Part G
+/*
+G1:
+G2:
+G3:
+G4:
+G5:
+ */
 
 
 
