@@ -144,6 +144,15 @@ G4:
 G5:
  */
 
+//Part H
+/*
+1. Average is 95
+2.  Average is 95
+3. they are 2 reference variables
+4.  No
+5. Create another student
+
+ */
 
 
 

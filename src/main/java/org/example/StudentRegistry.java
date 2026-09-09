@@ -3,28 +3,59 @@ package org.example;
 public class StudentRegistry {
     private ArrayList<Student> students;
 
-    public StudentRegistry(){
+    public static void main(String[] args) {
 
     }
 
-    public void addStudent(Student student)
+    public StudentRegistry() {
 
-    public Student findStudent(String id)
+    }
 
-    public boolean removeStudent(String id)
+    public void addStudent(Student student) {
+        students.add(student);
+    }
 
-    public double calculateAverage()
+    public Student findStudent(String id) {
+        for (Student student : students) {
+            if (student.getID().equals(id)) {
+                return student;
+            }
+        }
+        return null;
+    }
 
-    public Student findHighestAverage()
+    public boolean removeStudent(String id) {
 
-    public int countAbove(double threshold)
+    }
+
+    public double calculateAverage() {
+        double finalAverage = 0;
+        for (Student student : students) {
+            finalAverage = finalAverage + student.getAverage();
+        }
+        finalAverage = finalAverage / students.size();
+        return finalAverage;
+    }
+}
+
+    public Student findHighestAverage(){
+
+    }
+
+    public int countAbove(double threshold){
+        int count = 0;
+        for(Student student : students){
+            if(student.getAverage() > threshold){
+                count ++;
+            }
+        }
+        return count;
+    }
 
     @Override
-    public String toString()
-        return
-
+    public String toString(){
+        return ("Student ID:" + "" + id + "" + "Student Name:" + "" + name + "" + "Student Average:" + "" + average);
+    }
 }
 
-public class main(String [] args){
 
-}
