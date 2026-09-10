@@ -3,10 +3,10 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 public class StudentRegistry {
-    private ArrayList<Student> students = new ArrayList<>();
+    private ArrayList<Student> students;
 
     public StudentRegistry() {
-
+        this.students = new ArrayList<>();
     }
 
     public static void main(String[] args) {
