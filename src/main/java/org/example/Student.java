@@ -9,6 +9,18 @@ public class Student {
     private String name;
     private double average;
 
+    public Student(String id, String name, double average) {
+        this.id = id;
+        this.name = name;
+
+        // Part D
+        if (average < 0.0 || average > 100.0) {
+            throw new Error("Average must be between 0 and 100");
+        } else {
+            this.average = average;
+        }
+    }
+
     public static void main(String[] args) {
 
         Student student = new Student("2532424", "Drake", 98);
@@ -34,30 +46,18 @@ public class Student {
         */
 
         ArrayList<Student> students = new ArrayList<>();
-            students.add(new Student("V100001", "Amina", 86.5));
-            students.add(new Student("V100002", "Daniel", 72.0));
-            students.add(new Student("V100003", "Sofia", 91.0));
-            students.add(new Student("V100004", "Drake", 50.0));
-            students.add(new Student("V100005", "Lebron", 99.0));
+        students.add(new Student("V100001", "Amina", 86.5));
+        students.add(new Student("V100002", "Daniel", 72.0));
+        students.add(new Student("V100003", "Sofia", 91.0));
+        students.add(new Student("V100004", "Drake", 50.0));
+        students.add(new Student("V100005", "Lebron", 99.0));
 
-            System.out.println(findStudent(students, "V100004"));
-            System.out.println(findStudent(students, "V100009"));
+        System.out.println(findStudent(students, "V100004"));
+        System.out.println(findStudent(students, "V100009"));
 
-            System.out.println(countAbove(students, 10.0));
-            System.out.println(countAbove(students, 90.0));
+        System.out.println(countAbove(students, 10.0));
+        System.out.println(countAbove(students, 90.0));
 
-    }
-
-    public Student(String id, String name, double average) {
-        this.id = id;
-        this.name = name;
-
-        // Part D
-        if (average < 0.0 || average > 100.0) {
-            throw new Error("Average must be between 0 and 100");
-        } else {
-            this.average = average;
-        }
     }
 
     public String getId() {
@@ -84,7 +84,9 @@ public class Student {
 
     @Override
     public String toString() {
+
         return "Student ID:" + id + " " + "Student Name:" + name + " " + "Average:" + average;
+
     }
 
     //Part E
