@@ -21,16 +21,17 @@ public class Student {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String [] args) {
 
+        /*
         Student student = new Student("2532424", "Drake", 98);
 
         System.out.println("ID: " + student.getId());
         System.out.println("Name: " + student.getName());
         System.out.println("Average: " + student.getAverage());
-        // student1.setAverage(101.0);
+        student.setAverage(101.0);
+        */
 
-        /*
        Student[] students = {
                 new Student("V100001", "Amina", 86.5),
                 new Student("V100002", "Daniel", 72.0),
@@ -44,8 +45,8 @@ public class Student {
         System.out.println(calculateAverage(students));
         System.out.println(findStudent(students, "V100002")); // it will return the student id, name, and average
         System.out.println(findStudent(students, "V999999")); // it return null because there is no studentID with V999999.
-        */
 
+        /*
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student("V100001", "Amina", 86.5));
         students.add(new Student("V100002", "Daniel", 72.0));
@@ -58,7 +59,7 @@ public class Student {
 
         System.out.println(countAbove(students, 10.0));
         System.out.println(countAbove(students, 90.0));
-
+        */
     }
 
     public String getId() {
@@ -92,20 +93,18 @@ public class Student {
 
     //Part E
     public static double calculateAverage(Student[] students) {
-
         double finalAverage = 0;
-        double calculatedAverage = 0;
+        double calculatedAverage;
 
         for (Student studentAvg : students) {
             finalAverage = finalAverage + studentAvg.getAverage();
-
         }
+
         calculatedAverage = finalAverage / students.length;
         return calculatedAverage;
     }
 
     public static Student findStudent(Student[] students, String id) {
-
         for (Student student : students) {
             if (student.getId().equals(id)) {
                 return student;
@@ -140,11 +139,11 @@ public class Student {
 
 //Part G
 /*
-G1:
-G2:
-G3:
-G4:
-G5:
+G1: Array because the size is fixed.
+G2: ArrayList because you can gain or lose members (you cant remove from Array)
+G3: ArrayList because we dont know how many student there is until the user type "DONE"
+G4: Array because size is fixed, 7 days.
+G5: ArrayList because the enrollment limit will maybe change next year
  */
 
 //Part H
