@@ -1,8 +1,7 @@
 package org.example;
-import java.util.Iterator;
 
 public class Main {
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         int[] values = new int[]{1, 2, 3, 4, 15, -192, 200};
         int highest = findHighest(values);
@@ -28,8 +27,8 @@ public class Main {
  1. Both would print 99
  2. Both reference point to the same array
  3. Theyre both the same
- 4.
  5. int[] b = ArrayscopyOf(a,.alength);
 */
+
 
 

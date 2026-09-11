@@ -9,7 +9,7 @@ public class StudentRegistry {
         this.students = new ArrayList<>();
     }
 
-    public static void main(String[] args) {
+    static void main(String [] args) {
         // Part J
         // its better to read (more easy)
 
@@ -36,7 +36,7 @@ public class StudentRegistry {
         System.out.println(registry.findStudent("V100005"));
 
         System.out.println(registry.removeStudent("V100003")); // return true
-        System.out.println(registry.removeStudent("V100009")); // returns false
+        System.out.println(registry.removeStudent("V100009")); // return false
 
         System.out.println(registry.calculateAverage());
 
