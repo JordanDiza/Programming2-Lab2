@@ -24,6 +24,7 @@ public class Student {
     public static void main(String[] args) {
 
         Student student = new Student("2532424", "Drake", 98);
+
         System.out.println("ID: " + student.getId());
         System.out.println("Name: " + student.getName());
         System.out.println("Average: " + student.getAverage());

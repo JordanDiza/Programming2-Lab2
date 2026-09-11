@@ -10,7 +10,9 @@ public class StudentRegistry {
     }
 
     public static void main(String[] args) {
-        ArrayList<Student> students = new ArrayList<>();
+        // Part J
+        // its better to read (more easy)
+
         StudentRegistry registry = new StudentRegistry();
 
         Student student1 = new Student("V100001", "Drake", 67);
@@ -31,6 +33,15 @@ public class StudentRegistry {
         Student s = registry.findStudent("V100001");
         System.out.println(s);
 
+        System.out.println(registry.findStudent("V100005"));
+
+        System.out.println(registry.removeStudent("V100003")); // return true
+        System.out.println(registry.removeStudent("V100009")); // returns false
+
+        System.out.println(registry.calculateAverage());
+
+        System.out.println(registry.findHighestAverage());
+        System.out.println(registry.countAbove(60));
 
     }
 
@@ -49,7 +60,9 @@ public class StudentRegistry {
         return null;
     }
 
+    // Part K
     public boolean removeStudent(String id) {
+
         Iterator<Student> it = students.iterator();
 
         while (it.hasNext()) {
@@ -99,3 +112,5 @@ public class StudentRegistry {
         return ("numberOfStudent =" + students.size() + "students=" + students);
     }
 }
+
+
